@@ -1,0 +1,985 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Automation Test Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css">.test-content, .test-content-detail, .detail-body, .r-tab-panel, .test-wrapper, .test { max-height: none !important; height: auto !important; overflow: visible !important; } pre, .step-details, .exception, .stack-trace { white-space: pre-wrap !important; word-break: break-word !important; }</style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Playwright - Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sunday, October 18, 2026, 12:22 PM (IST)</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('device-view')">
+<a id="nav-device" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tablet"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">LoginTest</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tablet"></i></a>
+<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Chromium(LoginTest)</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_001_verifyRadioButtonSelection</p>
+            <p class="text-sm">
+              <span>12:22:43 PM</span> / <span>00:00:00:310</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_Login_001_verifyRadioButtonSelection</h5>
+<span class='badge badge-success'>10.18.2026 12:22:43 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:43 PM</span>
+<span class='badge badge-default'>00:00:00:310</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:43 PM</td>
+        <td>
+          Test passed: TC_Login_001_verifyRadioButtonSelection
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_002_verifyCheckboxSelection</p>
+            <p class="text-sm">
+              <span>12:22:43 PM</span> / <span>00:00:00:179</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_Login_002_verifyCheckboxSelection</h5>
+<span class='badge badge-success'>10.18.2026 12:22:43 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:43 PM</span>
+<span class='badge badge-default'>00:00:00:179</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:43 PM</td>
+        <td>
+          Test passed: TC_Login_002_verifyCheckboxSelection
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_003_verifyCountryAutocompleteSuggestion</p>
+            <p class="text-sm">
+              <span>12:22:43 PM</span> / <span>00:00:00:980</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_Login_003_verifyCountryAutocompleteSuggestion</h5>
+<span class='badge badge-success'>10.18.2026 12:22:43 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:44 PM</span>
+<span class='badge badge-default'>00:00:00:980</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:44 PM</td>
+        <td>
+          Test passed: TC_Login_003_verifyCountryAutocompleteSuggestion
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_004_verifyDropdownSelection</p>
+            <p class="text-sm">
+              <span>12:22:44 PM</span> / <span>00:00:00:054</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_Login_004_verifyDropdownSelection</h5>
+<span class='badge badge-success'>10.18.2026 12:22:44 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:44 PM</span>
+<span class='badge badge-default'>00:00:00:054</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:44 PM</td>
+        <td>
+          Test passed: TC_Login_004_verifyDropdownSelection
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_005_verifyAlertMessageOnAlertButton</p>
+            <p class="text-sm">
+              <span>12:22:44 PM</span> / <span>00:00:00:672</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_Login_005_verifyAlertMessageOnAlertButton</h5>
+<span class='badge badge-success'>10.18.2026 12:22:44 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:45 PM</span>
+<span class='badge badge-default'>00:00:00:672</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:45 PM</td>
+        <td>
+          Test passed: TC_Login_005_verifyAlertMessageOnAlertButton
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_006_verifyHideShowElement</p>
+            <p class="text-sm">
+              <span>12:22:45 PM</span> / <span>00:00:00:195</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_Login_006_verifyHideShowElement</h5>
+<span class='badge badge-success'>10.18.2026 12:22:45 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:45 PM</span>
+<span class='badge badge-default'>00:00:00:195</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:45 PM</td>
+        <td>
+          Test passed: TC_Login_006_verifyHideShowElement
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_007_verifyWebTableHeadersVisible</p>
+            <p class="text-sm">
+              <span>12:22:45 PM</span> / <span>00:00:00:288</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">TC_Login_007_verifyWebTableHeadersVisible</h5>
+<span class='badge badge-success'>10.18.2026 12:22:45 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:46 PM</span>
+<span class='badge badge-default'>00:00:00:288</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:22:45 PM</td>
+        <td>
+          Test failed: TC_Login_007_verifyWebTableHeadersVisible
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:22:45 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: Instructor header should be visible expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at Test.LoginTest.TC_Login_007_verifyWebTableHeadersVisible(LoginTest.java:120)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at runner.TestRunner.executeClientSuite(TestRunner.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:22:46 PM</td>
+        <td>
+          Screenshot on failure
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='file:/C:/Shubham/Projects/PlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20261018_122245.png' src="file:/C:/Shubham/Projects/PlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20261018_122245.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag="LoginTest"
+          device="Chromium(LoginTest)">
+          <div class="test-detail">
+            <p class="name">TC_Login_008_verifyMouseHoverRevealsTopLink</p>
+            <p class="text-sm">
+              <span>12:22:46 PM</span> / <span>00:00:00:604</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC_Login_008_verifyMouseHoverRevealsTopLink</h5>
+<span class='badge badge-success'>10.18.2026 12:22:46 PM</span>
+<span class='badge badge-danger'>10.18.2026 12:22:46 PM</span>
+<span class='badge badge-default'>00:00:00:604</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">LoginTest</span>
+<span class="badge badge-pill badge-default">Chromium(LoginTest)</span></div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:22:46 PM</td>
+        <td>
+          Test passed: TC_Login_008_verifyMouseHoverRevealsTopLink
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:22:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>TC_Login_007_verifyWebTableHeadersVisible</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">LoginTest</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>LoginTest</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>TC_Login_001_verifyRadioButtonSelection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>TC_Login_002_verifyCheckboxSelection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>TC_Login_003_verifyCountryAutocompleteSuggestion</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>TC_Login_004_verifyDropdownSelection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>TC_Login_005_verifyAlertMessageOnAlertButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>TC_Login_006_verifyHideShowElement</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:22:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>TC_Login_007_verifyWebTableHeadersVisible</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>TC_Login_008_verifyMouseHoverRevealsTopLink</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view device-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">Chromium(LoginTest)</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Chromium(LoginTest)</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>TC_Login_001_verifyRadioButtonSelection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>TC_Login_002_verifyCheckboxSelection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>TC_Login_003_verifyCountryAutocompleteSuggestion</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>TC_Login_004_verifyDropdownSelection</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>TC_Login_005_verifyAlertMessageOnAlertButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>TC_Login_006_verifyHideShowElement</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:22:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>TC_Login_007_verifyWebTableHeadersVisible</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:22:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>TC_Login_008_verifyMouseHoverRevealsTopLink</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sunday, October 18, 2026, 12:22 PM (IST)</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sunday, October 18, 2026, 12:22 PM (IST)</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>7</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='87%'>
+<b>7</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='12%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='70%'><b>7</b> events passed</small></div>
+<div>
+<small data-tooltip='30%'><b>3</b> events failed,
+<b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"TC_Login_001_verifyRadioButtonSelection":0.31,"TC_Login_002_verifyCheckboxSelection":0.179,"TC_Login_003_verifyCountryAutocompleteSuggestion":0.98,"TC_Login_004_verifyDropdownSelection":0.054,"TC_Login_005_verifyAlertMessageOnAlertButton":0.672,"TC_Login_006_verifyHideShowElement":0.195,"TC_Login_007_verifyWebTableHeadersVisible":0.288,"TC_Login_008_verifyMouseHoverRevealsTopLink":0.604
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>LoginTest</td>
+<td>7</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>87.5%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 device-container">
+<div class="card">
+<div class="card-header"><p>Device</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Chromium(LoginTest)</td>
+<td>7</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>87.5%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>chromium</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>Base URL</td>
+<td>https://rahulshettyacademy.com/AutomationPractice/</td>
+</tr>
+<tr>
+<td>Headless</td>
+<td>false</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>Executed By</td>
+<td>beerb</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 7,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 7,
+failEvents: 3,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script><div id="trace-video-fab" title="Trace &amp; Video" style="position:fixed;bottom:22px;right:22px;width:52px;height:52px;border-radius:50%;background:#4a90d9;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,0.5);cursor:pointer;z-index:999999;" onclick="var p=document.getElementById('trace-video-panel');p.style.display=(p.style.display==='none'||p.style.display==='')?'block':'none';"><i class="fa fa-video-camera" style="font-size:20px;"></i></div><div id="trace-video-panel" style="display:none;position:fixed;bottom:86px;right:22px;width:460px;max-width:92vw;max-height:80vh;overflow:auto;background:#2d2d2d;color:#ddd;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,0.55);padding:16px 18px;font-family:sans-serif;font-size:13px;line-height:1.7;z-index:999999;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;"><b style="color:#4a90d9;font-size:15px;">Trace &amp; Video - by class</b><span style="cursor:pointer;font-size:18px;color:#aaa;" onclick="document.getElementById('trace-video-panel').style.display='none';">&times;</span></div><div style="color:#999;margin-bottom:10px;">browser.lifecycle=CLASS - each class ran in its own browser, so each has its own video/trace below.</div><div style="margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid #444;"><b style="color:#4a90d9;font-size:14px;">LoginTest</b><br><div style="margin-top:6px;"><b style="color:#4a90d9;">Video:</b><br><video controls preload="metadata" style="width:100%;max-width:480px;max-height:280px;background:#000;display:block;margin:6px 0;border-radius:4px;"><source src="file:///C:/Shubham/Projects/PlaywrightProject/test-output/Exe_Videos/LoginTest_20261018_122249.webm" type="video/webm">Your browser can't play this video inline - open it directly: <a href="file:///C:/Shubham/Projects/PlaywrightProject/test-output/Exe_Videos/LoginTest_20261018_122249.webm" target="_blank">C:\Shubham\Projects\PlaywrightProject\test-output\Exe_Videos\LoginTest_20261018_122249.webm</a></video><div style="font-size:11px;color:#888;word-break:break-all;">C:\Shubham\Projects\PlaywrightProject\test-output\Exe_Videos\LoginTest_20261018_122249.webm</div></div><div style="margin-top:4px;"><b>Trace file:</b> C:\Shubham\Projects\PlaywrightProject\test-output\Trace\LoginTest_20261018_122246.zip<br>Open with <a href="https://trace.playwright.dev/" target="_blank">trace.playwright.dev</a> and drag the file above onto the page - no install or server needed.<br>Or run this from the project root:<br><code style="background:#1e1e1e;color:#ddd;padding:2px 6px;border-radius:3px;display:inline-block;margin-top:4px;word-break:break-all;">mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args=&quot;show-trace C:\Shubham\Projects\PlaywrightProject\test-output\Trace\LoginTest_20261018_122246.zip&quot;</code></div></div></div></body>
+</html>

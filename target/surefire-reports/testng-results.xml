@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<div style='margin-top:8px;'><b>Screenshot on failure:</b><br/><a href="file:/C:/Shubham/Projects/NewPlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20260913_164115.png" target="_blank"><img src="file:/C:/Shubham/Projects/NewPlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20260913_164115.png" alt="Screenshot on failure" title="Click to open full screenshot" style="width:300px;height:300px;object-fit:contain;border:1px solid #999;cursor:pointer;"/></a></div>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-09-13T16:40:49 IST" name="NewPlayWright" finished-at="2026-09-13T16:41:18 IST" duration-ms="29106">
+    <groups>
+    </groups>
+    <test started-at="2026-09-13T16:40:49 IST" name="FrameworkTesting" finished-at="2026-09-13T16:41:18 IST" duration-ms="29106">
+      <class name="Test.LoginTest">
+        <test-method is-config="true" signature="suiteSetUp()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:40:49 IST" name="suiteSetUp" finished-at="2026-09-13T16:40:49 IST" duration-ms="164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetUp -->
+        <test-method is-config="true" signature="classSetUp(org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:40:49 IST" name="classSetUp" finished-at="2026-09-13T16:40:49 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classSetUp -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:40:49 IST" name="methodSetUp" finished-at="2026-09-13T16:41:05 IST" duration-ms="16007" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_003_verifyCountryAutocompleteSuggestion()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:40:49 IST" name="methodSetUp" finished-at="2026-09-13T16:41:05 IST" duration-ms="16377" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_001_verifyRadioButtonSelection()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:40:49 IST" name="methodSetUp" finished-at="2026-09-13T16:41:05 IST" duration-ms="15834" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_005_verifyAlertMessageOnAlertButton()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:40:49 IST" name="methodSetUp" finished-at="2026-09-13T16:41:06 IST" duration-ms="16805" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_004_verifyDropdownSelection()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:40:49 IST" name="methodSetUp" finished-at="2026-09-13T16:41:05 IST" duration-ms="15828" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_002_verifyCheckboxSelection()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="initPageObjects" finished-at="2026-09-13T16:41:05 IST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="initPageObjects" finished-at="2026-09-13T16:41:05 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="TC_Login_005_verifyAlertMessageOnAlertButton()[pri:5, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="TC_Login_005_verifyAlertMessageOnAlertButton" finished-at="2026-09-13T16:41:07 IST" duration-ms="2053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_005_verifyAlertMessageOnAlertButton -->
+        <test-method signature="TC_Login_002_verifyCheckboxSelection()[pri:2, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="TC_Login_002_verifyCheckboxSelection" finished-at="2026-09-13T16:41:06 IST" duration-ms="1559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_002_verifyCheckboxSelection -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="initPageObjects" finished-at="2026-09-13T16:41:05 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="TC_Login_003_verifyCountryAutocompleteSuggestion()[pri:3, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="TC_Login_003_verifyCountryAutocompleteSuggestion" finished-at="2026-09-13T16:41:07 IST" duration-ms="1923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_003_verifyCountryAutocompleteSuggestion -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="initPageObjects" finished-at="2026-09-13T16:41:05 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="TC_Login_001_verifyRadioButtonSelection()[pri:1, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:05 IST" name="TC_Login_001_verifyRadioButtonSelection" finished-at="2026-09-13T16:41:06 IST" duration-ms="1068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_001_verifyRadioButtonSelection -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:06 IST" name="initPageObjects" finished-at="2026-09-13T16:41:06 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="TC_Login_004_verifyDropdownSelection()[pri:4, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:06 IST" name="TC_Login_004_verifyDropdownSelection" finished-at="2026-09-13T16:41:06 IST" duration-ms="602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_004_verifyDropdownSelection -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:08 IST" name="methodTearDown" finished-at="2026-09-13T16:41:10 IST" duration-ms="1823" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_004_verifyDropdownSelection status=SUCCESS method=LoginTest.TC_Login_004_verifyDropdownSelection()[pri:4, instance:Test.LoginTest@65a15628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:09 IST" name="methodTearDown" finished-at="2026-09-13T16:41:10 IST" duration-ms="1211" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_003_verifyCountryAutocompleteSuggestion status=SUCCESS method=LoginTest.TC_Login_003_verifyCountryAutocompleteSuggestion()[pri:3, instance:Test.LoginTest@65a15628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:09 IST" name="methodTearDown" finished-at="2026-09-13T16:41:10 IST" duration-ms="818" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_005_verifyAlertMessageOnAlertButton status=SUCCESS method=LoginTest.TC_Login_005_verifyAlertMessageOnAlertButton()[pri:5, instance:Test.LoginTest@65a15628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:09 IST" name="methodTearDown" finished-at="2026-09-13T16:41:10 IST" duration-ms="414" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_001_verifyRadioButtonSelection status=SUCCESS method=LoginTest.TC_Login_001_verifyRadioButtonSelection()[pri:1, instance:Test.LoginTest@65a15628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:10 IST" name="methodTearDown" finished-at="2026-09-13T16:41:10 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_002_verifyCheckboxSelection status=SUCCESS method=LoginTest.TC_Login_002_verifyCheckboxSelection()[pri:2, instance:Test.LoginTest@65a15628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:10 IST" name="methodSetUp" finished-at="2026-09-13T16:41:15 IST" duration-ms="5312" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_007_verifyWebTableHeadersVisible()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:10 IST" name="methodSetUp" finished-at="2026-09-13T16:41:15 IST" duration-ms="5140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_006_verifyHideShowElement()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="methodSetUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:10 IST" name="methodSetUp" finished-at="2026-09-13T16:41:15 IST" duration-ms="5234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Test.LoginTest.TC_Login_008_verifyMouseHoverRevealsTopLink()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d6bc158]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetUp -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:15 IST" name="initPageObjects" finished-at="2026-09-13T16:41:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="TC_Login_006_verifyHideShowElement()[pri:6, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:15 IST" name="TC_Login_006_verifyHideShowElement" finished-at="2026-09-13T16:41:16 IST" duration-ms="553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_006_verifyHideShowElement -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:15 IST" name="initPageObjects" finished-at="2026-09-13T16:41:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="TC_Login_008_verifyMouseHoverRevealsTopLink()[pri:8, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:15 IST" name="TC_Login_008_verifyMouseHoverRevealsTopLink" finished-at="2026-09-13T16:41:16 IST" duration-ms="1032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_008_verifyMouseHoverRevealsTopLink -->
+        <test-method is-config="true" signature="initPageObjects()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:15 IST" name="initPageObjects" finished-at="2026-09-13T16:41:15 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method signature="TC_Login_007_verifyWebTableHeadersVisible()[pri:7, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:15 IST" name="TC_Login_007_verifyWebTableHeadersVisible" finished-at="2026-09-13T16:41:15 IST" duration-ms="260" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Instructor header should be visible expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Instructor header should be visible expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at Test.LoginTest.TC_Login_007_verifyWebTableHeadersVisible(LoginTest.java:135)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div style='margin-top:8px;'><b>Screenshot on failure:</b><br/><a href="file:/C:/Shubham/Projects/NewPlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20260913_164115.png" target="_blank"><img src="file:/C:/Shubham/Projects/NewPlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20260913_164115.png" alt="Screenshot on failure" title="Click to open full screenshot" style="width:300px;height:300px;object-fit:contain;border:1px solid #999;cursor:pointer;"/></a></div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_Login_007_verifyWebTableHeadersVisible -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:16 IST" name="methodTearDown" finished-at="2026-09-13T16:41:18 IST" duration-ms="1798" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_006_verifyHideShowElement status=SUCCESS method=LoginTest.TC_Login_006_verifyHideShowElement()[pri:6, instance:Test.LoginTest@65a15628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:17 IST" name="methodTearDown" finished-at="2026-09-13T16:41:18 IST" duration-ms="340" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_007_verifyWebTableHeadersVisible status=FAILURE method=LoginTest.TC_Login_007_verifyWebTableHeadersVisible()[pri:7, instance:Test.LoginTest@65a15628] output=<div style='margin-top:8px;'><b>Screenshot on failure:</b><br/><a href="file:/C:/Shubham/Projects/NewPlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20260913_164115.png" target="_blank"><img src="file:/C:/Shubham/Projects/NewPlaywrightProject/test-output/Screenshots/LoginTest_TC_Login_007_verifyWebTableHeadersVisible_20260913_164115.png" alt="Screenshot on failure" title="Click to open full screenshot" style="width:300px;height:300px;object-fit:contain;border:1px solid #999;cursor:pointer;"/></a></div>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="methodTearDown(org.testng.ITestResult)[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:18 IST" name="methodTearDown" finished-at="2026-09-13T16:41:18 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_Login_008_verifyMouseHoverRevealsTopLink status=SUCCESS method=LoginTest.TC_Login_008_verifyMouseHoverRevealsTopLink()[pri:8, instance:Test.LoginTest@65a15628] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTearDown -->
+        <test-method is-config="true" signature="classTearDown()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:18 IST" name="classTearDown" finished-at="2026-09-13T16:41:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classTearDown -->
+        <test-method is-config="true" signature="suiteTearDown()[pri:0, instance:Test.LoginTest@65a15628]" started-at="2026-09-13T16:41:18 IST" name="suiteTearDown" finished-at="2026-09-13T16:41:18 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteTearDown -->
+      </class> <!-- Test.LoginTest -->
+    </test> <!-- FrameworkTesting -->
+  </suite> <!-- NewPlayWright -->
+</testng-results>

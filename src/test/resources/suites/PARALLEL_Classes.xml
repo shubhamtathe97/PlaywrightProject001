@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="NewPlayWright" parallel="classes" thread-count="3">
+	<listeners>
+		<listener class-name="Listeners.TestListener"/>
+	</listeners>
+	<test name="FrameworkTesting">
+		<classes>
+			<class name="Test.LoginTest" />
+			<class name="Test.LoginTest2" />
+			<class name="Test.LoginTest3" />
+		</classes>
+	</test>
+</suite>

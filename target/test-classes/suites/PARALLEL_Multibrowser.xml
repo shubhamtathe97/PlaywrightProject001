@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="NewPlayWright" parallel="tests" thread-count="3">
+	<listeners>
+		<listener class-name="Listeners.TestListener"/>
+	</listeners>
+
+	<test name="Chrome Run">
+		<parameter name="browser" value="chromium"/>
+		<classes>
+			<class name="Test.LoginTest" />
+		</classes>
+	</test>
+
+	<test name="Firefox Run">
+		<parameter name="browser" value="firefox"/>
+		<classes>
+			<class name="Test.LoginTest2" />
+		</classes>
+	</test>
+
+	<test name="Webkit Run">
+		<parameter name="browser" value="webkit"/>
+		<classes>
+			<class name="Test.LoginTest3" />
+		</classes>
+	</test>
+</suite>

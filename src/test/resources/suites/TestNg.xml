@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  TestNg.xml — Convenience entry point for running from the IDE
+  (Eclipse "Run As > TestNG Suite"). Maven does NOT use this file;
+  Maven uses src/test/resources/suites/QA.xml (see pom.xml <suiteFile>).
+-->
+<suite name="ClientXmlSelection">
+	<test name="FrameworkTesting">
+		<classes>
+			<class name="runner.TestRunner" />
+		</classes>
+	</test>
+</suite>

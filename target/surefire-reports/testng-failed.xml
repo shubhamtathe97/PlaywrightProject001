@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [NewPlayWright]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="Listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="FrameworkTesting(failed)" verbose="0">
+    <classes>
+      <class name="Test.LoginTest">
+        <methods>
+          <include name="methodTearDown"/>
+          <include name="methodSetUp"/>
+          <include name="initPageObjects"/>
+          <include name="classSetUp"/>
+          <include name="suiteSetUp"/>
+          <include name="suiteTearDown"/>
+          <include name="classTearDown"/>
+          <include name="TC_Login_007_verifyWebTableHeadersVisible"/>
+        </methods>
+      </class> <!-- Test.LoginTest -->
+    </classes>
+  </test> <!-- FrameworkTesting(failed) -->
+</suite> <!-- Failed suite [NewPlayWright] -->
