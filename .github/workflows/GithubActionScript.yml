@@ -37,8 +37,13 @@ jobs:
             -DsuiteFile=src/test/resources/suites/TestNg.xml \
             -DtrimStackTrace=false | tee maven-build.log
 
-      # Reads the real results (8 tests) written by your framework run
-      # and shows them on the GitHub run page (Summary tab).
+      - name: List generated files
+        if: always()
+        run: |
+          echo "--- test-output ---"
+          find test-output -maxdepth 4 -type f | head -200 || true
+
+      # Finds the REAL suite results (ignores the executeClientSuite wrapper)
       - name: Show Real Test Results on Dashboard
         if: always()
         run: |
@@ -46,39 +51,90 @@ jobs:
           import glob, os
           import xml.etree.ElementTree as ET
 
-          out = os.environ["GITHUB_STEP_SUMMARY"]
-          files = glob.glob("test-output/**/testng-results.xml", recursive=True)
+          WRAPPER = {"executeClientSuite"}
+          candidates = []
+          debug = []
 
-          with open(out, "a", encoding="utf-8") as s:
+          # 1) TestNG native results
+          paths = glob.glob("test-output/**/testng-results.xml", recursive=True)
+          paths += glob.glob("target/surefire-reports/**/testng-results.xml", recursive=True)
+          for f in sorted(set(paths)):
+              try:
+                  root = ET.parse(f).getroot()
+              except Exception as e:
+                  debug.append((f, "unreadable: %s" % e))
+                  continue
+              ms = [(m.get("name"), m.get("status")) for m in root.iter("test-method")
+                    if m.get("is-config") != "true"]
+              names = {n for n, _ in ms}
+              debug.append((f, "total=%s passed=%s failed=%s skipped=%s methods=%d" % (
+                  root.get("total"), root.get("passed"), root.get("failed"),
+                  root.get("skipped"), len(ms))))
+              if names and names <= WRAPPER:
+                  continue
+              candidates.append({
+                  "file": f,
+                  "total": int(root.get("total", "0")),
+                  "passed": int(root.get("passed", "0")),
+                  "failed": int(root.get("failed", "0")),
+                  "skipped": int(root.get("skipped", "0")),
+                  "bad": [(s, n) for n, s in ms if s in ("FAIL", "SKIP")],
+              })
+
+          # 2) JUnit-style XML written by TestNG (test-output/junitreports)
+          jt = jp = jf = js = 0
+          jbad = []
+          jfiles = glob.glob("test-output/**/junitreports/*.xml", recursive=True)
+          for f in sorted(jfiles):
+              try:
+                  root = ET.parse(f).getroot()
+              except Exception:
+                  continue
+              for tc in root.iter("testcase"):
+                  name = tc.get("name")
+                  if name in WRAPPER:
+                      continue
+                  jt += 1
+                  if tc.find("failure") is not None or tc.find("error") is not None:
+                      jf += 1
+                      jbad.append(("FAIL", name))
+                  elif tc.find("skipped") is not None:
+                      js += 1
+                      jbad.append(("SKIP", name))
+                  else:
+                      jp += 1
+          if jt:
+              debug.append(("junitreports (combined)", "total=%d passed=%d failed=%d skipped=%d" % (jt, jp, jf, js)))
+              candidates.append({"file": "junitreports", "total": jt, "passed": jp,
+                                 "failed": jf, "skipped": js, "bad": jbad})
+
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as s:
               s.write("## Framework Test Results\n\n")
-              if not files:
-                  s.write("No testng-results.xml found in test-output/. "
-                          "Download the Framework-Report artifact for details.\n")
-              else:
-                  root = ET.parse(files[0]).getroot()
-                  total = root.get("total", "0")
-                  passed = root.get("passed", "0")
-                  failed = root.get("failed", "0")
-                  skipped = root.get("skipped", "0")
-                  icon = "✅" if failed == "0" else "❌"
+              if candidates:
+                  best = max(candidates, key=lambda c: c["total"])
+                  icon = "✅" if best["failed"] == 0 else "❌"
                   s.write("| Total | Passed | Failed | Skipped |\n")
                   s.write("|:-----:|:------:|:------:|:-------:|\n")
-                  s.write(f"| {total} | {passed} | {failed} | {skipped} |\n\n")
-                  s.write(f"{icon} **{passed} of {total} tests passed**\n\n")
-
-                  bad = []
-                  for m in root.iter("test-method"):
-                      if m.get("is-config") == "true":
-                          continue
-                      if m.get("status") in ("FAIL", "SKIP"):
-                          bad.append((m.get("status"), m.get("name")))
-                  if bad:
+                  s.write("| %d | %d | %d | %d |\n\n" % (
+                      best["total"], best["passed"], best["failed"], best["skipped"]))
+                  s.write("%s **%d of %d tests passed**\n\n" % (icon, best["passed"], best["total"]))
+                  if best["bad"]:
                       s.write("### Failed / Skipped tests\n\n")
-                      for status, name in bad:
-                          s.write(f"- **{status}** - `{name}`\n")
+                      for status, name in best["bad"]:
+                          s.write("- **%s** - `%s`\n" % (status, name))
+                      s.write("\n")
+              else:
+                  s.write("⚠️ Real suite results were not found in a readable format. "
+                          "See the debug list below and the Framework-Report artifact.\n\n")
+              s.write("<details><summary>Debug: results files found</summary>\n\n")
+              if debug:
+                  for f, info in debug:
+                      s.write("- `%s` - %s\n" % (f, info))
+              else:
+                  s.write("- none\n")
+              s.write("\n</details>\n")
           PY
 
-      # The only report folder that is uploaded: your framework report
       - name: Upload Framework Report
         if: always()
         uses: actions/upload-artifact@v4
