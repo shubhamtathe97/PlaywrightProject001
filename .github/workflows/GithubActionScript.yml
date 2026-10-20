@@ -10,7 +10,6 @@ on:
 permissions:
   contents: read
   checks: write
-  pull-requests: write
 
 jobs:
   playwright-tests:
@@ -38,44 +37,55 @@ jobs:
             -DsuiteFile=src/test/resources/suites/TestNg.xml \
             -DtrimStackTrace=false | tee maven-build.log
 
-      - name: List generated report files
+      # Reads the real results (8 tests) written by your framework run
+      # and shows them on the GitHub run page (Summary tab).
+      - name: Show Real Test Results on Dashboard
         if: always()
         run: |
-          echo "--- test-output ---"
-          find test-output -maxdepth 3 | head -100 || true
+          python3 - <<'PY'
+          import glob, os
+          import xml.etree.ElementTree as ET
 
-      # Your real report (Extent report with all 8 tests)
-      - name: Upload Framework Report (test-output)
+          out = os.environ["GITHUB_STEP_SUMMARY"]
+          files = glob.glob("test-output/**/testng-results.xml", recursive=True)
+
+          with open(out, "a", encoding="utf-8") as s:
+              s.write("## Framework Test Results\n\n")
+              if not files:
+                  s.write("No testng-results.xml found in test-output/. "
+                          "Download the Framework-Report artifact for details.\n")
+              else:
+                  root = ET.parse(files[0]).getroot()
+                  total = root.get("total", "0")
+                  passed = root.get("passed", "0")
+                  failed = root.get("failed", "0")
+                  skipped = root.get("skipped", "0")
+                  icon = "✅" if failed == "0" else "❌"
+                  s.write("| Total | Passed | Failed | Skipped |\n")
+                  s.write("|:-----:|:------:|:------:|:-------:|\n")
+                  s.write(f"| {total} | {passed} | {failed} | {skipped} |\n\n")
+                  s.write(f"{icon} **{passed} of {total} tests passed**\n\n")
+
+                  bad = []
+                  for m in root.iter("test-method"):
+                      if m.get("is-config") == "true":
+                          continue
+                      if m.get("status") in ("FAIL", "SKIP"):
+                          bad.append((m.get("status"), m.get("name")))
+                  if bad:
+                      s.write("### Failed / Skipped tests\n\n")
+                      for status, name in bad:
+                          s.write(f"- **{status}** - `{name}`\n")
+          PY
+
+      # The only report folder that is uploaded: your framework report
+      - name: Upload Framework Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Framework-Report
-          path: test-output/
-          if-no-files-found: warn
-          retention-days: 14
-
-      # Maven wrapper results + build log
-      - name: Upload Surefire Reports and Log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: Surefire-Reports
           path: |
-            target/surefire-reports/
+            test-output/
             maven-build.log
           if-no-files-found: warn
           retention-days: 14
-
-      # Shows the REAL pass/fail counts (from the inner STAGING suite)
-      # on the run page instead of the "1 failed" wrapper result.
-      - name: Publish Real Test Results
-        if: always()
-        uses: dorny/test-reporter@v1
-        continue-on-error: true
-        with:
-          name: Framework Test Results
-          path: |
-            test-output/junitreports/TEST-*.xml
-            test-output/**/junitreports/TEST-*.xml
-          reporter: java-junit
-          fail-on-error: false
