@@ -31,10 +31,6 @@ jobs:
       - name: Install Playwright browsers
         run: mvn -B exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
 
-      # Your pom.xml reads the suite file from the property "suiteFile"
-      # (NOT "suiteXmlFile"), so we pass the correct name here.
-      # xvfb-run gives the browser a virtual display in case your code
-      # launches it in headed mode.
       - name: Run TestNG Suite
         run: |
           set -o pipefail
@@ -45,27 +41,41 @@ jobs:
       - name: List generated report files
         if: always()
         run: |
-          ls -la target/surefire-reports || true
-          ls -la test-output || true
+          echo "--- test-output ---"
+          find test-output -maxdepth 3 | head -100 || true
 
-      - name: Upload Reports and Logs
+      # Your real report (Extent report with all 8 tests)
+      - name: Upload Framework Report (test-output)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: TestNG-Reports
+          name: Framework-Report
+          path: test-output/
+          if-no-files-found: warn
+          retention-days: 14
+
+      # Maven wrapper results + build log
+      - name: Upload Surefire Reports and Log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Surefire-Reports
           path: |
             target/surefire-reports/
-            test-output/
             maven-build.log
           if-no-files-found: warn
           retention-days: 14
 
-      - name: Publish Test Results
+      # Shows the REAL pass/fail counts (from the inner STAGING suite)
+      # on the run page instead of the "1 failed" wrapper result.
+      - name: Publish Real Test Results
         if: always()
         uses: dorny/test-reporter@v1
         continue-on-error: true
         with:
-          name: TestNG Results
-          path: target/surefire-reports/TEST-*.xml
+          name: Framework Test Results
+          path: |
+            test-output/junitreports/TEST-*.xml
+            test-output/**/junitreports/TEST-*.xml
           reporter: java-junit
           fail-on-error: false
