@@ -5,10 +5,17 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
 
 jobs:
   playwright-tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout Code
@@ -21,15 +28,53 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Check Maven version
-        run: mvn -version
+      - name: Check Java and Maven versions
+        run: |
+          java -version
+          mvn -version
+
+      # Installs Chromium/Firefox/WebKit AND the Linux libraries they need.
+      # Without this, tests fail on the GitHub runner.
+      - name: Install Playwright browsers
+        run: mvn -B exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
 
       - name: Run TestNG Suite
-        run: mvn clean test -DsuiteXmlFile=testng.xml
+        run: mvn -B clean test -DsuiteXmlFile=testng.xml
 
-      - name: Upload TestNG Reports
+      # if: always() makes sure reports are published even when tests fail
+      - name: Upload TestNG / Surefire Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: TestNG-Reports
-          path: target/surefire-reports
+          path: |
+            target/surefire-reports/
+            test-output/
+          if-no-files-found: warn
+          retention-days: 14
+
+      # Uploads screenshots / traces / videos if your tests save them
+      - name: Upload Screenshots and Traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Playwright-Screenshots-Traces
+          path: |
+            screenshots/
+            traces/
+            videos/
+            target/screenshots/
+            target/traces/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      # Shows pass/fail results directly on the run page and PR checks
+      - name: Publish Test Results
+        if: always()
+        uses: dorny/test-reporter@v1
+        continue-on-error: true
+        with:
+          name: TestNG Results
+          path: target/surefire-reports/TEST-*.xml
+          reporter: java-junit
+          fail-on-error: false
